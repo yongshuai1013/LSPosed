@@ -154,6 +154,8 @@ dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.kotlinx.coroutines.core)
     implementation(projects.services.managerService)
+    implementation(io.github.libxposed.api)
+    // Add other required libxposed modules as needed
 
     debugImplementation(libs.appcenter.analytics)
     debugImplementation(libs.appcenter.crashes)
