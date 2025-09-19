@@ -78,12 +78,13 @@ tasks.register("Delete", Delete::class) {
     delete(rootProject.layout.buildDirectory)
 }
 
-tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
     kotlinOptions {
-        jvmTarget = the Java compiler is targeting JVM 17, but the Kotlin compiler is targeting JVM 17. To resolve this, make sure both Java and Kotlin are targeting the same JVM version.
-
-Solution:
-1. In your Gradle build files (usually "17"
+        jvmTarget = "17"
     }
 }
 
