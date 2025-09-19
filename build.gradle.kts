@@ -111,10 +111,6 @@ subprojects {
             }
         }
     }
-
-    dependencies {
-    implementation("io.github.libxposed:api-annotations:1.0.0") // Replace with latest version
-    }
     
     plugins.withType(JavaPlugin::class.java) {
         extensions.configure(JavaPluginExtension::class.java) {
