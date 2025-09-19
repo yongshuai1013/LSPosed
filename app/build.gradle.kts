@@ -21,6 +21,7 @@ import java.time.Instant
 
 plugins {
     alias(libs.plugins.agp.app)
+    alias(libs.plugins.agp.lib)
     alias(libs.plugins.nav.safeargs)
     alias(libs.plugins.autoresconfig)
     alias(libs.plugins.materialthemebuilder)
@@ -122,6 +123,7 @@ materialThemeBuilder {
 }
 
 dependencies {
+    api(libs.libxposed.api)
     annotationProcessor(libs.glide.compiler)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.browser)
@@ -154,7 +156,6 @@ dependencies {
     implementation(libs.kotlin.stdlib)
     implementation(libs.kotlinx.coroutines.core)
     implementation(projects.services.managerService)
-    implementation(libs.libxposed.api)
 
     debugImplementation(libs.appcenter.analytics)
     debugImplementation(libs.appcenter.crashes)
